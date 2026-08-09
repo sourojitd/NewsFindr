@@ -279,17 +279,13 @@ Source lives in [`docs/`](./docs) and is served via GitHub Pages.
 
 ## Repository contents
 
-| File | Purpose | Publish to GitHub? |
-|---|---|---|
-| `NewsFindr.ipynb` | Main executed notebook (primary deliverable) | **Yes** |
-| `NewsFindr.html` / `Sourojit_NewsFindr.html` | Static HTML render of the notebook | **Yes** |
-| `docs/` | GitHub Pages showcase site | **Yes** |
-| `README.md` | This portfolio-grade project brief | **Yes** |
-| `customer.db` | **Input CRM data** — SQLite with 15 customers | **Yes — include it** |
-| `requirements.txt` | Python dependencies | **Yes (strongly recommended)** |
-| `.env` | `GROQ_API_KEY` (local secrets) | **No — never commit** |
-| `_build_notebook.py` | Generator that rebuilds the `.ipynb` | Optional |
-| `.venv/` | Local virtualenv | **No** |
+| File | Purpose |
+|---|---|
+| `NewsFindr.ipynb` | Main executed notebook (primary deliverable) |
+| `NewsFindr.html` / `Sourojit_NewsFindr.html` | Static HTML render of the notebook |
+| `docs/` | GitHub Pages showcase site |
+| `README.md` | Project brief |
+| `customer.db` | Input CRM data — SQLite with 15 customers |
 
 ### About `customer.db`
 
@@ -311,38 +307,11 @@ The notebook can also recreate/seed this DB idempotently (`INSERT OR IGNORE`), b
 
 ## Quick start
 
-### 1. Clone & environment
+1. Clone the repo and open `NewsFindr.ipynb` in Jupyter / VS Code.
+2. Create a local `.env` with `GROQ_API_KEY=...` (never commit this file).
+3. Run all cells — the notebook installs its own dependencies in the setup section.
 
-```bash
-git clone https://github.com/sourojitd/NewsFindr.git
-cd NewsFindr
-
-python -m venv .venv
-# Windows
-.venv\Scripts\activate
-# macOS / Linux
-source .venv/bin/activate
-
-pip install -r requirements.txt
-```
-
-### 2. Add your Groq key
-
-Create a local `.env` (do not commit):
-
-```env
-GROQ_API_KEY=your_key_here
-```
-
-### 3. Run the notebook
-
-Open `NewsFindr.ipynb` in Jupyter / VS Code and **Run All**, or:
-
-```bash
-jupyter nbconvert --to notebook --execute --inplace NewsFindr.ipynb
-```
-
-View the static walkthrough anytime via `Sourojit_NewsFindr.html`.
+View the static walkthrough anytime via `Sourojit_NewsFindr.html`, or the interactive site at [sourojitd.github.io/NewsFindr](https://sourojitd.github.io/NewsFindr/).
 
 ---
 
