@@ -19,8 +19,9 @@
   --glass: rgba(255, 255, 255, 0.55);
   --shadow: 0 24px 60px rgba(12, 21, 36, 0.12);
   --radius: 18px;
-  --font-display: "Syne", system-ui, sans-serif;
-  --font-body: "Figtree", system-ui, sans-serif;
+  --font-display: "Fraunces", "Times New Roman", serif;
+  --font-body: "Manrope", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
   --max: 1120px;
   --nav-h: 72px;
 }
@@ -39,6 +40,14 @@ body {
   margin: 0;
   color: var(--ink);
   font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.65;
+  letter-spacing: -0.011em;
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background:
     radial-gradient(1200px 600px at 10% -10%, rgba(13, 148, 136, 0.16), transparent 55%),
     radial-gradient(900px 500px at 100% 0%, rgba(245, 158, 11, 0.12), transparent 50%),
@@ -104,9 +113,10 @@ img {
 
 .nav-brand {
   font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 1.15rem;
-  letter-spacing: -0.03em;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-variation-settings: "SOFT" 50, "WONK" 0;
+  letter-spacing: -0.02em;
   display: flex;
   align-items: center;
   gap: 0.55rem;
@@ -241,12 +251,14 @@ img {
 
 .hero-brand {
   font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(3.4rem, 12vw, 7.2rem);
-  line-height: 0.92;
-  letter-spacing: -0.055em;
-  margin: 0 0 1rem;
-  background: linear-gradient(180deg, #ffffff 20%, #99f6e4 100%);
+  font-weight: 600;
+  font-size: clamp(3.6rem, 13vw, 7.6rem);
+  font-optical-sizing: auto;
+  font-variation-settings: "SOFT" 70, "WONK" 0.4;
+  line-height: 0.9;
+  letter-spacing: -0.035em;
+  margin: 0 0 1.1rem;
+  background: linear-gradient(180deg, #ffffff 18%, #99f6e4 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -255,19 +267,23 @@ img {
 
 .hero-headline {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(1.25rem, 3.2vw, 1.85rem);
-  letter-spacing: -0.03em;
-  margin: 0 0 0.85rem;
+  font-weight: 500;
+  font-size: clamp(1.35rem, 3.4vw, 2rem);
+  font-variation-settings: "SOFT" 40, "WONK" 0;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0 0 0.95rem;
   color: rgba(240, 253, 250, 0.96);
 }
 
 .hero-support {
   margin: 0 auto 1.75rem;
-  max-width: 38rem;
-  font-size: 1.05rem;
-  line-height: 1.55;
-  color: rgba(204, 251, 241, 0.78);
+  max-width: 36rem;
+  font-size: 1.08rem;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: -0.005em;
+  color: rgba(204, 251, 241, 0.8);
 }
 
 .hero-ctas {
@@ -360,29 +376,31 @@ img {
 }
 
 .section-label {
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--teal-deep);
-  margin: 0 0 0.65rem;
+  margin: 0 0 0.75rem;
 }
 
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(1.9rem, 4.5vw, 3rem);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 1.05;
-  margin: 0 0 0.85rem;
+  font-size: clamp(2rem, 4.8vw, 3.15rem);
+  font-weight: 600;
+  font-variation-settings: "SOFT" 35, "WONK" 0;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  margin: 0 0 0.95rem;
 }
 
 .section-lead {
   max-width: 40rem;
   margin: 0 0 2.25rem;
-  color: rgba(12, 21, 36, 0.72);
-  font-size: 1.05rem;
-  line-height: 1.6;
+  color: rgba(12, 21, 36, 0.7);
+  font-size: 1.08rem;
+  font-weight: 400;
+  line-height: 1.7;
 }
 
 .reveal {
@@ -415,7 +433,8 @@ img {
 .problem-block h3 {
   margin: 0 0 0.5rem;
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 1.3rem;
+  font-weight: 600;
   letter-spacing: -0.02em;
 }
 
@@ -483,15 +502,15 @@ img {
 .step-btn .num {
   display: inline-block;
   font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 0.78rem;
+  font-weight: 600;
+  font-size: 0.82rem;
   color: var(--teal-deep);
   margin-right: 0.45rem;
 }
 
 .step-btn .name {
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.015em;
 }
 
 .pipeline-panel {
@@ -544,9 +563,10 @@ img {
 
 .panel-title {
   font-family: var(--font-display);
-  font-size: 1.55rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font-size: 1.7rem;
+  font-weight: 600;
+  font-variation-settings: "SOFT" 40, "WONK" 0;
+  letter-spacing: -0.025em;
   margin: 0 0 0.65rem;
 }
 
@@ -641,7 +661,8 @@ img {
 .topic-card h3 {
   margin: 0 0 0.4rem;
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 1.22rem;
+  font-weight: 600;
   letter-spacing: -0.02em;
 }
 
@@ -739,7 +760,7 @@ img {
   background: var(--ink);
   color: #e7f8f5;
   padding: 1.35rem;
-  font-family: ui-monospace, "Cascadia Code", "Fira Code", monospace;
+  font-family: var(--font-mono);
   min-height: 220px;
 }
 
@@ -835,8 +856,10 @@ img {
 
 .author-main h2 {
   font-family: var(--font-display);
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
-  letter-spacing: -0.04em;
+  font-size: clamp(2rem, 4.2vw, 2.7rem);
+  font-weight: 600;
+  font-variation-settings: "SOFT" 45, "WONK" 0.2;
+  letter-spacing: -0.03em;
   margin: 0 0 0.5rem;
 }
 
@@ -877,8 +900,9 @@ img {
 .stat strong {
   display: block;
   font-family: var(--font-display);
-  font-size: 1.7rem;
-  letter-spacing: -0.04em;
+  font-size: 1.85rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
   margin-bottom: 0.15rem;
 }
 
