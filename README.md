@@ -34,16 +34,16 @@
 
 <br/>
 
-<a href="https://sourojitd.github.io/NewsFindr/">
-  <img src="https://img.shields.io/badge/Live_Site-sourojitd.github.io%2FNewsFindr-0d9488?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live GitHub Pages site"/>
+<a href="https://sourojitd.github.io/AIML-NewsFindr/">
+  <img src="https://img.shields.io/badge/Live_Site-sourojitd.github.io%2FAIML-NewsFindr-0d9488?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live GitHub Pages site"/>
 </a>
-<a href="https://sourojitd.github.io/NewsFindr/">
+<a href="https://sourojitd.github.io/AIML-NewsFindr/">
   <img src="https://img.shields.io/badge/Interactive-Pipeline%20%26%20Topics-f59e0b?style=for-the-badge" alt="Interactive showcase"/>
 </a>
 
 <br/><br/>
 
-[**Live showcase**](https://sourojitd.github.io/NewsFindr/) · [Notebook](#-repository-contents) · [Architecture](#-system-architecture) · [AIML Topics](#-aiml-topics-demonstrated) · [Pipeline](#-end-to-end-data-flow) · [Run](#-quick-start)
+[**Live showcase**](https://sourojitd.github.io/AIML-NewsFindr/) · [Notebook](#-repository-contents) · [Architecture](#-system-architecture) · [AIML Topics](#-aiml-topics-demonstrated) · [Pipeline](#-end-to-end-data-flow) · [Run](#-quick-start)
 
 </div>
 
@@ -273,7 +273,7 @@ mindmap
 
 Interactive public page (pipeline explorer, topic deep-dives, temperature demo, animations):
 
-**https://sourojitd.github.io/NewsFindr/**
+**https://sourojitd.github.io/AIML-NewsFindr/**
 
 Source lives in [`docs/`](./docs) and is served via GitHub Pages.
 
@@ -311,7 +311,7 @@ The notebook can also recreate/seed this DB idempotently (`INSERT OR IGNORE`), b
 2. Create a local `.env` with `GROQ_API_KEY=...` (never commit this file).
 3. Run all cells — the notebook installs its own dependencies in the setup section.
 
-View the static walkthrough anytime via `Sourojit_NewsFindr.html`, or the interactive site at [sourojitd.github.io/NewsFindr](https://sourojitd.github.io/NewsFindr/).
+View the static walkthrough anytime via `Sourojit_NewsFindr.html`, or the interactive site at [sourojitd.github.io/AIML-NewsFindr](https://sourojitd.github.io/AIML-NewsFindr/).
 
 ---
 
