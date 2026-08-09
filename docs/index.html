@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NewsFindr — Agentic AI News Assistant by Sourojit Dhua</title>
+    <meta
+      name="description"
+      content="NewsFindr is an agentic GenAI system by Sourojit Dhua: LangChain SQL agent, DuckDuckGo retrieval, trust filtering, ReAct tools, and Groq LLaMA 3.1 summarisation."
+    />
+    <meta name="author" content="Sourojit Dhua" />
+    <meta
+      name="keywords"
+      content="agentic AI, LangChain, Groq, LLaMA, NLP, ReAct agent, SQL agent, personalized news, generative AI, Sourojit Dhua"
+    />
+    <meta property="og:title" content="NewsFindr — Agentic AI News Assistant" />
+    <meta
+      property="og:description"
+      content="Personalised, fresh, credibility-filtered news digests via multi-agent GenAI. Built by Sourojit Dhua."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sourojitd.github.io/NewsFindr/" />
+    <meta name="theme-color" content="#0f2f33" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+    <header class="nav" role="banner">
+      <a class="nav-brand" href="#top" aria-label="NewsFindr home">
+        <span class="nav-mark" aria-hidden="true"></span>
+        NewsFindr
+      </a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        Menu
+      </button>
+      <nav class="nav-links" id="nav-links" aria-label="Primary">
+        <a href="#pipeline">Pipeline</a>
+        <a href="#topics">Topics</a>
+        <a href="#temperature">Temperature</a>
+        <a href="#author">Author</a>
+        <a class="nav-cta" href="https://github.com/sourojitd/NewsFindr" target="_blank" rel="noopener">
+          GitHub
+        </a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <!-- HERO: brand-first, one composition -->
+      <section class="hero" aria-label="NewsFindr hero">
+        <div class="hero-visual" aria-hidden="true">
+          <canvas id="signal-canvas"></canvas>
+          <div class="hero-grain"></div>
+        </div>
+        <div class="hero-content">
+          <div class="hero-kicker"><span class="dot"></span> Live agentic retrieval</div>
+          <h1 class="hero-brand">NewsFindr</h1>
+          <p class="hero-headline">Personalised news, decided by agents — not by noise.</p>
+          <p class="hero-support">
+            An end-to-end GenAI pipeline that verifies a customer, searches the live web, keeps only
+            trusted sources, and returns a Top-3 digest with summaries.
+          </p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="https://github.com/sourojitd/NewsFindr" target="_blank" rel="noopener">
+              View repository
+            </a>
+            <a class="btn btn-ghost" href="#pipeline">Explore the system</a>
+          </div>
+        </div>
+        <div class="hero-scroll" aria-hidden="true">
+          Scroll
+          <span></span>
+        </div>
+      </section>
+
+      <!-- Problem -->
+      <section class="section" id="about">
+        <div class="section-inner reveal">
+          <p class="section-label">The brief</p>
+          <h2 class="section-title">From information overload to signal.</h2>
+          <p class="section-lead">
+            Generic feeds bury relevance. NewsFindr uses agentic AI — SQL grounding, query expansion,
+            credibility gates, and ReAct tool use — so every digest is personal, fresh, and trustworthy.
+          </p>
+          <div class="problem">
+            <div class="problem-block pain">
+              <h3>Without NewsFindr</h3>
+              <p>Volume without verification. Stale links. Untrusted domains. No link to who the reader actually is.</p>
+            </div>
+            <div class="problem-arrow" aria-hidden="true">→</div>
+            <div class="problem-block gain">
+              <h3>With NewsFindr</h3>
+              <p>CRM interests + optional intent → live search → allowlisted publishers → LLM ranking → Top-3 summaries.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive pipeline -->
+      <section class="section" id="pipeline">
+        <div class="section-inner reveal">
+          <p class="section-label">Interactive architecture</p>
+          <h2 class="section-title">Six stages. One orchestrated system.</h2>
+          <p class="section-lead">
+            Click a stage — or watch it auto-advance — to see what Sourojit implemented and which AIML
+            ideas each step proves.
+          </p>
+          <div class="pipeline">
+            <div class="pipeline-steps" id="pipeline-steps" role="tablist" aria-label="Pipeline stages"></div>
+            <div class="pipeline-panel" id="pipeline-panel" role="tabpanel" aria-live="polite"></div>
+          </div>
+
+          <div class="arch-flow reveal" style="margin-top: 2rem">
+            <div class="arch-node">Email + query<small>User intent</small></div>
+            <div class="arch-connector">→</div>
+            <div class="arch-node">SQL Agent<small>customer.db</small></div>
+            <div class="arch-connector">→</div>
+            <div class="arch-node">Expand + DDG<small>Fresh web</small></div>
+            <div class="arch-connector">→</div>
+            <div class="arch-node">Trust filter<small>Allowlist</small></div>
+            <div class="arch-connector">→</div>
+            <div class="arch-node">Summarise<small>Top-3 digest</small></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topics -->
+      <section class="section" id="topics">
+        <div class="section-inner reveal">
+          <p class="section-label">AIML depth</p>
+          <h2 class="section-title">Important topics covered — in detail.</h2>
+          <p class="section-lead">
+            Filter the catalogue, then expand any tile. This is the skill surface the notebook is designed
+            to demonstrate.
+          </p>
+          <div class="topic-filters" id="topic-filters" aria-label="Topic filters"></div>
+          <div class="topic-grid" id="topic-grid"></div>
+        </div>
+      </section>
+
+      <!-- Temperature interactive -->
+      <section class="section" id="temperature">
+        <div class="section-inner reveal">
+          <p class="section-label">Interactive demo</p>
+          <h2 class="section-title">Temperature is a product decision.</h2>
+          <p class="section-lead">
+            Toggle low vs high temperature to see the pedagogical contrast used in the notebook —
+            deterministic agent behaviour versus creative sampling.
+          </p>
+          <div class="temp-demo">
+            <div class="temp-controls">
+              <strong style="font-family: var(--font-display); font-size: 1.2rem; letter-spacing: -0.02em">
+                Prompt: six-word tagline for a personalised news app
+              </strong>
+              <div class="temp-switch" role="group" aria-label="Temperature">
+                <button type="button" class="temp-btn is-active" data-temp="0">llm · temp 0</button>
+                <button type="button" class="temp-btn" data-temp="0.9">llm_high · temp 0.9</button>
+              </div>
+              <div class="temp-meter" aria-hidden="true"><span id="temp-meter-fill"></span></div>
+              <p id="temp-label" style="margin: 0; color: rgba(12, 21, 36, 0.65); font-weight: 600; font-size: 0.92rem">
+                temperature = 0 → deterministic, repeatable
+              </p>
+              <p style="margin: 1rem 0 0; color: rgba(12, 21, 36, 0.6); font-size: 0.9rem; line-height: 1.5">
+                In production agents, NewsFindr locks temperature at 0 so SQL, relevance, and summaries stay
+                auditable. High temperature is shown only to teach sampling behaviour.
+              </p>
+            </div>
+            <div class="temp-output">
+              <h4>Sampled outputs</h4>
+              <div class="temp-lines" id="temp-lines"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dual modes -->
+      <section class="section" id="modes">
+        <div class="section-inner reveal">
+          <p class="section-label">Orchestration</p>
+          <h2 class="section-title">Two ways to run the same brain.</h2>
+          <p class="section-lead">
+            Shipping both a deterministic pipeline and a ReAct agent shows judgment: reproducibility for
+            demos, autonomy for agentic research.
+          </p>
+          <div class="problem">
+            <div class="problem-block gain">
+              <h3>Deterministic pipeline</h3>
+              <p>
+                <code>newsfindr()</code> / <code>query_response()</code> — explicit stage order, verbose
+                audit trail, ideal for Kevin / Julia / Alice demos under rate limits.
+              </p>
+            </div>
+            <div class="problem-arrow" aria-hidden="true">∥</div>
+            <div class="problem-block" style="background: linear-gradient(160deg, rgba(245, 158, 11, 0.12), rgba(255, 255, 255, 0.65))">
+              <h3>ReAct agent</h3>
+              <p>
+                Four Tools + <code>ZERO_SHOT_REACT_DESCRIPTION</code> — Thought / Action / Observation with
+                parse-error recovery and fallback if the loop does not converge.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Author -->
+      <section class="section" id="author">
+        <div class="section-inner reveal">
+          <p class="section-label">Built by</p>
+          <div class="author">
+            <div class="author-main">
+              <h2>Sourojit Dhua</h2>
+              <p>
+                Advanced GenAI for NLP · Agentic systems · LangChain · Groq · Retrieval & trust design.
+                NewsFindr is a portfolio-grade demonstration that relational grounding, live search,
+                credibility filters, and tool-using agents belong in one coherent product story.
+              </p>
+              <div class="skill-cloud" aria-label="Skills">
+                <span>Agentic AI</span>
+                <span>LangChain</span>
+                <span>ReAct</span>
+                <span>SQL Agents</span>
+                <span>Prompt Engineering</span>
+                <span>LLM-as-Judge</span>
+                <span>DuckDuckGo RAG-lite</span>
+                <span>Groq LLaMA 3.1</span>
+                <span>Trust & Safety</span>
+                <span>Jupyter Delivery</span>
+              </div>
+              <div class="hero-ctas" style="justify-content: flex-start; margin-top: 1.35rem">
+                <a class="btn btn-ink" href="https://github.com/sourojitd" target="_blank" rel="noopener">
+                  github.com/sourojitd
+                </a>
+                <a class="btn btn-ghost" style="color: var(--ink); border-color: var(--line-strong); background: #fff" href="https://github.com/sourojitd/NewsFindr" target="_blank" rel="noopener">
+                  Star the repo
+                </a>
+              </div>
+            </div>
+            <div class="author-side">
+              <div class="stat-grid">
+                <div class="stat">
+                  <strong data-count="6" data-suffix="">0</strong>
+                  <span>Pipeline stages</span>
+                </div>
+                <div class="stat">
+                  <strong data-count="4" data-suffix="">0</strong>
+                  <span>ReAct tools</span>
+                </div>
+                <div class="stat">
+                  <strong data-count="15" data-suffix="">0</strong>
+                  <span>CRM customers</span>
+                </div>
+                <div class="stat">
+                  <strong data-count="3" data-suffix="">0</strong>
+                  <span>Live demo queries</span>
+                </div>
+              </div>
+              <p style="margin: 1.1rem 0 0; color: rgba(12, 21, 36, 0.65); line-height: 1.55; font-size: 0.95rem">
+                Stack: Python · LangChain · LangChain-Groq · SQLite · DuckDuckGo · BeautifulSoup · Jupyter
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="https://github.com/sourojitd/NewsFindr" target="_blank" rel="noopener">Repository</a>
+        <a href="https://github.com/sourojitd/NewsFindr/blob/main/NewsFindr.ipynb" target="_blank" rel="noopener">Notebook</a>
+        <a href="https://github.com/sourojitd/NewsFindr/blob/main/README.md" target="_blank" rel="noopener">README</a>
+      </div>
+      <p>
+        <strong>NewsFindr</strong> · Designed & engineered by <strong>Sourojit Dhua</strong><br />
+        Advanced GenAI for NLP · Public portfolio project
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
